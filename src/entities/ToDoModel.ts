@@ -18,7 +18,7 @@ export class ToDo extends BaseEntity {
   @Field(() => Boolean)
   public completed: boolean;
 
-  @ManyToOne(() => List, parent_list => parent_list.id, {onDelete:'CASCADE'})
+  @ManyToOne(() => List, parent_list => parent_list.id, {onDelete:'CASCADE', eager: true})
   @Field(() => List)
   public parent_list: string;
 }

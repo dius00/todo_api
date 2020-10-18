@@ -10,7 +10,7 @@ export class List extends BaseEntity{
   @Field(() => ID)
   public id: string;
 
-  @ManyToOne( type => User, list_owner => list_owner.id, {onDelete:'CASCADE'})
+  @ManyToOne( type => User, list_owner => list_owner.id, {onDelete:'CASCADE', eager:true})
   @Field(() => User)
   public list_owner: User;
 
