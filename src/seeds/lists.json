@@ -1,0 +1,33 @@
+[
+    {
+        "list_owner": "b81f6e41-2371-49c0-950a-36087cc3cde6",
+        "is_public": false,
+        "listname": "Antonio`s list",
+        "id": "cd28557f-512d-4577-9e57-75cbc7278985"
+    },
+    {
+        "is_public": true,
+        "listname": "A dogs life",
+        "list_owner": "dd459b89-8e18-4a92-859e-98be467624c9",
+        "id": "f4149f30-8d9b-4ef4-bedb-6a06d6fded9f"
+    },
+    {
+        "is_public": true,
+        "listname": "daily routine",
+        "list_owner": "6096e236-3848-4031-b7d2-4f4d54d10b00",
+        "id": "132b59f4-0cb7-4e56-bbb5-ce27cf561c2a"
+    },
+    {
+        "is_public": false,
+        "listname": "there's an impostor among us",
+        "list_owner": "52b56b9d-4127-4bf0-8a9f-edcf91110556",
+        "id": "eb3d696d-cd35-486e-a831-be73919fd227"
+    },
+    {
+        "is_public": false,
+        "listname": "seeding database is tiring",
+        "list_owner": "ea97d8a8-7a0c-481e-b5b3-3b891d51b6cf",
+        "id": "61590ca0-ab51-4b79-8ba5-187ab6fe810c"
+    }
+
+]

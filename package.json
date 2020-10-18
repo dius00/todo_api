@@ -1,0 +1,37 @@
+{
+  "name": "todo_api",
+  "version": "1.0.0",
+  "description": "a simple todo_api",
+  "main": "index.js",
+  "scripts": {
+    "testConnection": "ts-node -r dotenv/config src/scripts/testConnection.ts",
+    "makeMigrations": "ts-node -r dotenv/config ./node_modules/typeorm/cli.js --config src/ormconfig.ts migration:generate -n initialTable",
+    "migrate": "npm run orm migration:run",
+    "orm": "ts-node -r dotenv/config ./node_modules/typeorm/cli.js --config src/ormconfig.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seeder": "ts-node -r dotenv/config ./node_modules/typeorm-seeding/dist/cli.js --configName src/ormconfig.ts seed"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dius00/todo_api.git"
+  },
+  "author": "Antonio De Rinaldis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dius00/todo_api/issues"
+  },
+  "homepage": "https://github.com/dius00/todo_api#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pg": "^8.4.1",
+    "typeorm": "^0.2.28",
+    "typeorm-seeding": "^1.6.1",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.10",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}

@@ -1,0 +1,33 @@
+[
+    {
+        "username": "antoniodr",
+        "displayName": "Antonio De Rinaldis",
+        "id": "b81f6e41-2371-49c0-950a-36087cc3cde6",
+        "passwordHash": "44dddbec55b92b6b000b2c8917b2d3c8"
+    },
+    {
+        "username": "makkia_doggo",
+        "displayName": "Makkia Dog, the best dog",
+        "id": "dd459b89-8e18-4a92-859e-98be467624c9",
+        "passwordHash": "3330d745ce0e1db1b623e0c757bc1899"
+    },
+    {
+        "username": "team_test",
+        "displayName": "CC15 Rulse",
+        "id": "6096e236-3848-4031-b7d2-4f4d54d10b00",
+        "passwordHash": "20778ea05bb99805f4986823ad29e441"
+    },
+    {
+        "username": "jjtabulator",
+        "displayName": "Jay sus",
+        "id": "52b56b9d-4127-4bf0-8a9f-edcf91110556",
+        "passwordHash": "5bd07a8224bc89e3bbe4003ddfa78008"
+    },
+    {
+        "username": "number_5",
+        "displayName": "i am running out of things to write",
+        "id": "ea97d8a8-7a0c-481e-b5b3-3b891d51b6cf",
+        "passwordHash": "eaf7e90f385c6ea9de406013f644d0dd"
+    }
+
+]
