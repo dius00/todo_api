@@ -1,6 +1,6 @@
 import { Factory, Seeder } from 'typeorm-seeding'
 import { Connection } from 'typeorm'
-import List from "../entities/ListModel"
+import { List } from "../entities/ListModel"
 const dummyList = require('./lists.json');
 
 export default class CreateList implements Seeder {

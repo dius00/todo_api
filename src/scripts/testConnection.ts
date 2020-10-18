@@ -1,8 +1,8 @@
 import DatabaseConnectionManager from "../database";
 import { getRepository } from "typeorm";
-import User from "../entities/UserModel"
-import List from "../entities/ListModel";
-import ToDo from "../entities/ListModel"
+import { User } from "../entities/UserModel"
+import { List } from "../entities/ListModel";
+import { ToDo } from "../entities/ToDoModel"
 
 DatabaseConnectionManager.connect()
   .then(() => {

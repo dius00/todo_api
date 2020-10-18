@@ -3,6 +3,7 @@ import { createConnection } from 'typeorm';
 import { ApolloServer } from 'apollo-server';
 import { buildSchema } from 'type-graphql';
 import { GQLResolver } from './src/graphql/resolver/resolver';
+import dbConfig from "./ormconfig";
 
 
 async function runServer() {

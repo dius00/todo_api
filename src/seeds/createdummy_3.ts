@@ -1,6 +1,6 @@
 import { Factory, Seeder } from 'typeorm-seeding'
 import { Connection } from 'typeorm'
-import ToDo from "../entities/ToDoModel"
+import { ToDo } from "../entities/ToDoModel"
 const dummyTodo = require('./todos.json');
 
 export default class CreateTodo implements Seeder {

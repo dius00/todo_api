@@ -1,5 +1,5 @@
 import { createConnection, ConnectionOptions } from "typeorm";
-import dbConfig from "./ormconfig";
+import dbConfig from "../ormconfig";
 
 class DatabaseConnectionManager {
   public static async connect() {
