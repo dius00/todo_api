@@ -1,6 +1,14 @@
 require('dotenv').config();
+const { ApolloServer } = require("apollo-server");
+const typeDefs = require("./src/graphql/schema/schema");
+const resolvers = require("./src/graphql/resolver/resolver");
 
-import { getRepository } from "typeorm";
-const List = require("../todo_api/src/entities/ListModel");
+const server = new ApolloServer({ typeDefs, resolvers });
 
-console.log(getRepository(List).findOne("cd28557f-512d-4577-9e57-75cbc7278985"));
+const PORT = process.env.PORT || 4000;
+
+server.listen(PORT, () => {
+  console.log(
+    `Running a GraphQL API server with Apollo at localhost:${PORT}/graphql`
+  );
+});
