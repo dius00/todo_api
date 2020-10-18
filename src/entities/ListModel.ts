@@ -1,22 +1,29 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne} from "typeorm";
-import User from "./UserModel";
+import { Entity, BaseEntity, Column, PrimaryGeneratedColumn, ManyToOne} from "typeorm";
+import { ObjectType, Field, ID } from 'type-graphql';
+import { User } from "./UserModel";
 
+@ObjectType()
 @Entity({name: "lists" /* Relation name in database */})
-class List {
+export class List extends BaseEntity{
+
   @PrimaryGeneratedColumn("uuid")
+  @Field(() => ID)
   public id: string;
 
-  @ManyToOne(() => User, list_owner => list_owner.id, {onDelete:'CASCADE'})
+  @ManyToOne( type => User, list_owner => list_owner.id, {onDelete:'CASCADE'})
+  @Field(() => User)
   public list_owner: User;
 
   @Column()
+  @Field(() => String)
   public listname: string;
 
   @Column()
+  @Field(() => Boolean)
   public is_public: boolean;
 }
 
-export default List;
+// export default List;
 
 
 // TO_DO change is_public to is_shared and and add a new column for is_shared_with
