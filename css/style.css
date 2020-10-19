@@ -260,13 +260,24 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 /*------------------------------------*\
 	Logo
 \*------------------------------------*/
+#mainlogo {
+  position: absolute;
+  max-height: 400px;
+  left: 85%;
+  top: -3.5cm;
+  z-index: 2;
+  border-radius: 10%;
+
+}
+
+
 .navbar-brand {
     padding: 0;
 }
 
 .navbar-brand .logo {
 	margin-top: 10px;
-	display: inline-block;
+  display: inline-block;
 }
 
 .navbar-brand .logo > img {
@@ -699,7 +710,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .footer-logo  .logo > img {
-	max-height:30px;
+	max-height:100px;
 }
 
 /* -- Footer Nav -- */
