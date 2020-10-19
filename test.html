@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script src="js/test.js"></script>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +13,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
 
 		<!-- Font Awesome Icon -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -76,9 +77,9 @@
 					<div class="col-md-10 col-md-offset-1 text-center">
 						<ul class="hero-area-tree">
 							<li><a href="index.html">Home</a></li>
-							<li>Documentation</li>
+							<li>Test Page</li>
 						</ul>
-						<h1 class="white-text">Documentation Page</h1>
+						<h1 class="white-text">Test Page</h1>
 
 					</div>
 				</div>
@@ -93,109 +94,40 @@
 			<!-- container -->
 			<div class="container">
 
-				<!-- row -->
+		<!-- row -->
         <div class="row">
           <div class="section-header text-center">
-            
-            <a class="main-button icon-button" id="test_1" href="#">Get Makkia's ToDo list!</a><
-
+            <a class="main-button icon-button" id="test_1" href="#">Get Makkia's ToDo list!</a>
             <div class="codebox">
-            <code class="codebox_2">
-              type User { <br>
-                id: ID!<br>
-                username: String!<br>
-                passwordHash: String!<br>
-                displayName: String!<br>
-              }<br>
-              <br>
-              type TDList {<br>
-                id: ID!<br>
-                list_owner: User!<br>
-                listname: String!<br>
-                is_public: Boolean!<br>
-              }<br>
-              <br>
-              type ToDo {<br>
-                id: ID!<br>
-                description: String!<br>
-                completed: Boolean!<br>
-                parent_list: TDList!<br>
-              }
-            </code>
-          </div>
-          </div>
-      </div>
-      <!-- /row -->
-
-      <!-- row -->
-      <div class="row">
-        <div class="section-header text-center">
-          <h2>Input Types</h2>
-          <div class="codebox">
-          <code class="codebox_2">
-            input types here
-          </code>
-        </div>
-        </div>
-    </div>
-    <!-- /row -->
-
-      <!-- row -->
-      <div class="row">
-        <div class="section-header text-center">
-          <h2>Queries</h2>
-          <div class="codebox">
-          <code class="codebox_2">
-            type Query {<br>
-              <br>
-              getUser(id: String!): User!<br>
-              <br>
-              getList(id: String!): TDList!<br>
-              <br>
-              getUserLists(id: String!): [TDList!]!<br>
-              <br>
-              getToDosinList(id: String!): [ToDo!]!<br>
-              <br>
-              getToDo(id: String!): ToDo!<br>
-            }
-          </code>
-        </div>
-        </div>
-    </div>
-    <!-- /row -->
-<!-- row -->
-      <div class="row">
-        <div class="section-header text-center">
-          <h2>Mutations</h2>
-          <div class="codebox">
-          <code class="codebox_2">
-            type Mutation {<br>
-              <br>
-              addUser(data: CreateUser!): User!<br>
-              <br>
-              addToDo(data: CreateToDo!): ToDo!<br>
-              <br>
-              addList(data: CreateTDList!): TDList!<br>
-              <br>
-              deleteUser(id: String!): String!<br>
-              <br>
-              deleteList(id: String!): String!<br>
-              <br>
-              deleteToDo(id: String!): String!<br>
-              <br>
-              modifyList(data: InputList!): TDList!<br>
-              <br>
-              modifyToDo(data: InputToDo!): ToDo!<br>
-              <br>
-              modifyListPrivacy(id: String!): TDList!<br>
-              <br>
-              modifyUser(data: InputUser!): User!<br>
-            }
-          </code>
-        </div>
-        </div>
-    </div>
-    <!-- /row -->
+            <code class="codebox_3" id="makkiatarget">
+              </code>
+        	  </div>
+          	</div>
+      	</div>
+      	<!-- /row -->
+		
+		<!-- row -->
+        <div class="row">
+			<div class="section-header text-center">
+			  <a class="main-button icon-button" id="test_2" href="#">Get CC's List!</a>
+			  <div class="codebox">
+			  <code class="codebox_3" id="cctarget">
+				</code>
+				</div>
+				</div>
+			</div>
+			<!-- /row -->
+	  
+			<div class="row">
+				<div class="section-header text-center">
+				  <a class="main-button icon-button" id="test_3" href="#">Complete Radio Taiso!</a>
+				  <div class="codebox">
+				  <code class="codebox_3" id="taisotarget">
+					</code>
+					</div>
+					</div>
+				</div>
+				<!-- /row -->
 			</div>
 			<!-- container -->
 

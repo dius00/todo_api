@@ -55,6 +55,7 @@
 					<ul class="main-menu nav navbar-nav navbar-right">
 						<li><a href="index.html">Home</a></li>
 						<li><a href="blog.html">Documentation</a></li>
+						<li><a href="test.html">Test</a></li>
 						<li><a href="mailto:antonio.derinaldis@outlook.com">Contact</a></li>
 					</ul>
 				</nav>
@@ -76,7 +77,8 @@
 					<div class="col-md-10 col-md-offset-1 text-center">
 						<ul class="hero-area-tree">
 							<li><a href="index.html">Home</a></li>
-							<li>Documentation</li>
+							<li><a href="blog.html">Documentation</a></li>
+							<li><a href="test.html">Test</a></li>
 						</ul>
 						<h1 class="white-text">Documentation Page</h1>
 
@@ -131,8 +133,45 @@
           <h2>Input Types</h2>
           <div class="codebox">
           <code class="codebox_2">
-            input types here
-          </code>
+			input CreateTDList {<br>
+				list_owner: String!<br>
+				listname: String!<br>
+				is_public: Boolean!<br>
+			  }<br>
+			  <br>
+			  input CreateToDo {<br>
+				description: String!<br>
+				completed: Boolean!<br>
+				parent_list: String!<br>
+			  }<br>
+			  <br>
+			  input CreateUser {<br>
+				username: String!<br>
+				passwordHash: String!<br>
+				displayName: String!<br>
+			  }<br>
+			  <br>
+			  input InputList {<br>
+				id: String!<br>
+				list_owner: String<br>
+				listname: String<br>
+				is_public: Boolean<br>
+			  }<br>
+			  <br>
+			  input InputToDo {<br>
+				id: String!<br>
+				description: String<br>
+				completed: Boolean<br>
+				parent_list: String<br>
+			  }<br>
+			  <br>
+			  input InputUser {<br>
+				id: String!<br>
+				username: String<br>
+				passwordHash: String<br>
+				displayName: String<br>
+			  }
+						</code>
         </div>
         </div>
     </div>
@@ -174,7 +213,9 @@
               addToDo(data: CreateToDo!): ToDo!<br>
               <br>
               addList(data: CreateTDList!): TDList!<br>
-              <br>
+			  <br>
+			  switchCompleteToDo(id: String!): ToDo!<br>
+			  <br>
               deleteUser(id: String!): String!<br>
               <br>
               deleteList(id: String!): String!<br>

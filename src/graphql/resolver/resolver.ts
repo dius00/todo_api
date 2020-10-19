@@ -131,6 +131,14 @@ export class GQLResolver {
     return patchToDo;
   }
 
+  @Mutation(() => ToDo)
+  async switchCompleteToDo(@Arg("id") id:String) {
+    const switchToDO = await ToDo.findOne(id);
+    switchToDO.completed = !switchToDO.completed;
+    ToDo.save(switchToDO);
+    return switchToDO;
+  }
+
   @Mutation(() => TDList)
   async modifyListPrivacy(@Arg("id") id: string) {
     const patchList = await this.getList(id);
