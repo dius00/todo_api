@@ -1,6 +1,8 @@
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import { ApolloServer } from 'apollo-server';
+import express from "express";
+import { graphqlHTTP } from 'express-graphql';
+import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
 import { GQLResolver } from './src/graphql/resolver/resolver';
 import dbConfig from "./ormconfig";
@@ -11,11 +13,21 @@ async function runServer() {
   const schema = await buildSchema({
     resolvers: [GQLResolver]
   });
-
+  const app = express();
   const server = new ApolloServer({ schema });
-  await server.listen(5050);
+  app.use(express.static("./"));
 
-  console.log('Server started at localhost:5050');
+  server.applyMiddleware({app});
+  
+  // ?app.use('/graphql', graphqlHTTP({
+  //   schema: schema,
+  //   rootValue: () => console.log("graphql middleware loaded"),
+  //   graphiql: true,
+  // }));
+  app.listen(4000);  
+  // await server.listen(5050);
+
+  console.log('Server started at localhost:4000');
 }
 
 

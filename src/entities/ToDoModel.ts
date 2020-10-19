@@ -20,7 +20,7 @@ export class ToDo extends BaseEntity {
 
   @ManyToOne(() => TDList, parent_list => parent_list.id, {onDelete:'CASCADE', eager: true})
   @Field(() => TDList)
-  public parent_list: string;
+  public parent_list: TDList;
 }
 
 // export default ToDo;
