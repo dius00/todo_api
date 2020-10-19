@@ -1,6 +1,6 @@
 import { Entity, BaseEntity, Column, PrimaryGeneratedColumn, ManyToOne } from "typeorm";
 import { ObjectType, Field, ID } from 'type-graphql';
-import { List } from "./ListModel";
+import { TDList } from "./ListModel";
 
 @ObjectType()
 @Entity({name: "todos" /* Relation name in database */})
@@ -18,8 +18,8 @@ export class ToDo extends BaseEntity {
   @Field(() => Boolean)
   public completed: boolean;
 
-  @ManyToOne(() => List, parent_list => parent_list.id, {onDelete:'CASCADE', eager: true})
-  @Field(() => List)
+  @ManyToOne(() => TDList, parent_list => parent_list.id, {onDelete:'CASCADE', eager: true})
+  @Field(() => TDList)
   public parent_list: string;
 }
 

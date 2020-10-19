@@ -8,7 +8,7 @@
     "migrate": "npm run orm migration:run",
     "seeder": "ts-node -r dotenv/config ./node_modules/typeorm-seeding/dist/cli.js --configName ormconfig.ts seed",
     "testConnection": "ts-node -r dotenv/config src/scripts/testConnection.ts",
-    "dev": "node --inspect -r ts-node/register -r dotenv/config index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only index.ts",
     "orm": "ts-node -r dotenv/config ./node_modules/typeorm/cli.js --config ormconfig.ts"
   },
   "repository": {
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/node": "^14.11.10",
     "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0",
     "type-graphql": "^1.1.0",
     "typescript": "^4.0.3"
   }

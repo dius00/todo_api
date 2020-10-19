@@ -13,9 +13,9 @@ async function runServer() {
   });
 
   const server = new ApolloServer({ schema });
-  await server.listen(8050);
+  await server.listen(5050);
 
-  console.log('Server started at port ::8050');
+  console.log('Server started at localhost:5050');
 }
 
 

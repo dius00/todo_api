@@ -3,8 +3,8 @@ import { ObjectType, Field, ID } from 'type-graphql';
 import { User } from "./UserModel";
 
 @ObjectType()
-@Entity({name: "lists" /* Relation name in database */})
-export class List extends BaseEntity{
+@Entity({name: "tdlist" /* Relation name in database */})
+export class TDList extends BaseEntity{
 
   @PrimaryGeneratedColumn("uuid")
   @Field(() => ID)

@@ -1,7 +1,8 @@
 import { InputType, Field } from "type-graphql";
 
 @InputType()
-export class CreateList {
+export class CreateTDList {
+
   @Field()
   public list_owner: string;
 
